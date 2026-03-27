@@ -1,0 +1,106 @@
+/* --- Section Container --- */
+.extra-services-section {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.extra-services-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 24px;
+}
+
+/* --- Grid Layout --- */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* --- Card Styles --- */
+.service-card {
+  background: #ffffff;
+  border: 1px solid #e3e8ee;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Wrapper */
+.service-img-wrapper {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+}
+
+.service-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Dark overlay effect like Figma */
+  filter: brightness(0.7);
+}
+
+/* Floating Icon Badge */
+.service-icon-circle {
+  position: absolute;
+  right: 20px;
+  bottom: -25px;
+  width: 55px;
+  height: 55px;
+  background: #d1e7ff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.service-icon-circle i {
+  font-size: 18px;
+  color: #1c1c1c;
+}
+
+/* Text Content */
+.service-info {
+  padding: 20px;
+  padding-top: 35px; /* Space for the floating icon */
+}
+
+.service-info p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1c1c1c;
+  line-height: 22px;
+  margin: 0;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .extra-services-title {
+    font-size: 20px;
+  }
+}

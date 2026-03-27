@@ -1,0 +1,184 @@
+/* --- Hero Layout --- */
+.hero-section {
+  max-width: 1440px;
+  margin: 20px auto;
+  padding: 0 5%;
+}
+
+.hero-container {
+  display: flex;
+  gap: 20px;
+  background: #ffffff;
+  border: 1px solid #e3e8ee;
+  border-radius: 6px;
+  padding: 20px;
+  min-height: 400px;
+}
+
+/* --- Left Sidebar --- */
+.hero-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.hero-sidebar ul {
+  list-style: none;
+}
+
+.hero-sidebar ul li {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #505050;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.hero-sidebar ul li:hover {
+  background-color: #e5f1ff;
+  color: #1c1c1c;
+}
+
+.hero-sidebar ul li.active {
+  background-color: #e5f1ff;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+
+/* --- Main Banner --- */
+.hero-main-banner {
+  flex: 1;
+  background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80');
+  background-size: cover;
+  background-position: center;
+  border-radius: 4px;
+  padding: 40px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Banner Animations */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes revealText {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.fade-in-left {
+  font-size: 28px;
+  color: #1c1c1c;
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.reveal-text {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: revealText 1.2s steps(40, end) 0.5s forwards;
+  width: 0;
+}
+
+.learn-more-btn {
+  background: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.learn-more-btn:hover {
+  transform: scale(1.05);
+}
+
+/* --- Right Side Cards --- */
+.hero-right-side {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-card {
+  background: #e3f0ff;
+  padding: 15px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.avatar-circle {
+  width: 44px;
+  height: 44px;
+  background: #c7dbf4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.join-btn {
+  width: 100%;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.login-btn {
+  width: 100%;
+  background: #fff;
+  color: #0d6efd;
+  border: 1px solid #e3e8ee;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.promo-card {
+  padding: 16px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+  height: 95px;
+}
+
+.promo-card.orange { background: #f38332; }
+.promo-card.teal { background: #55bdc3; }
+
+/* Pop Animation for Cards */
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-pop { animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+.delay-1 { animation-delay: 0.2s; opacity: 0; }
+.delay-2 { animation-delay: 0.4s; opacity: 0; }
+
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+  .hero-sidebar, .hero-right-side { display: none; }
+}

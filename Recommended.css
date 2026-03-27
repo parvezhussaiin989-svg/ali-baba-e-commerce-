@@ -1,0 +1,113 @@
+/* --- Section Main --- */
+.recommended-section {
+  max-width: 1440px;
+  margin: 40px auto;
+  padding: 0 5%;
+}
+
+.recommended-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Title Underline Animation */
+.recommended-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50px;
+  height: 3px;
+  background: #0d6efd;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.recommended-section:hover .recommended-title::after {
+  width: 100%;
+}
+
+/* --- Grid Layout --- */
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* --- Entrance Animation --- */
+@keyframes softPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.reveal-item {
+  opacity: 0;
+  animation: softPopIn 0.6s ease-out forwards;
+}
+
+/* --- Footer & Load More --- */
+.recommended-footer {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.load-more-btn {
+  background: #ffffff;
+  border: 1px solid #e3e8ee;
+  color: #0d6efd;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.load-more-btn i {
+  font-size: 12px;
+  transition: transform 0.3s;
+}
+
+.load-more-btn:hover {
+  background: #0d6efd;
+  color: #ffffff;
+  border-color: #0d6efd;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
+}
+
+.load-more-btn:hover i {
+  transform: translateY(3px);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .recommended-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .recommended-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .recommended-grid {
+    grid-template-columns: 1fr;
+  }
+}

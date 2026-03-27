@@ -1,0 +1,196 @@
+/* --- Base Styles --- */
+.navbar-main {
+  background: #ffffff;
+  border-bottom: 1px solid #e3e8ee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-main.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding-bottom: 5px;
+}
+
+.navbar-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 15px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- Logo --- */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.nav-logo img {
+  height: 40px;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: 700;
+  color: #8b96a5;
+  transition: color 0.3s;
+}
+
+.nav-logo:hover .brand-name {
+  color: #0d6efd;
+}
+
+/* --- Animated Search Bar --- */
+.nav-search-wrapper {
+  flex: 1;
+  max-width: 660px;
+  margin: 0 30px;
+}
+
+.search-group {
+  display: flex;
+  border: 2px solid #0d6efd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.search-group:focus-within {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.2);
+}
+
+.search-input {
+  flex: 3;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+}
+
+.search-category {
+  flex: 1;
+  border: none;
+  border-left: 1px solid #e3e8ee;
+  padding: 0 10px;
+  outline: none;
+  background: #fff;
+  cursor: pointer;
+}
+
+.search-btn {
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  padding: 0 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-btn:hover {
+  background: #0056b3;
+}
+
+/* --- Icons Section --- */
+.nav-icons {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #8b96a5;
+  cursor: pointer;
+  font-size: 12px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-icon-item i {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.nav-icon-item:hover {
+  color: #0d6efd;
+}
+
+/* Badge Animation */
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  border: 2px solid #fff;
+}
+
+/* --- Bottom Nav Bar --- */
+.navbar-bottom {
+  border-top: 1px solid #e3e8ee;
+  padding: 10px 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.nav-links li:hover {
+  color: #0d6efd;
+}
+
+.nav-settings {
+  display: flex;
+  gap: 20px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.nav-settings img {
+  width: 18px;
+  vertical-align: middle;
+}
+
+/* --- Animations --- */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.bounce-on-hover:hover i {
+  animation: bounce 0.5s ease infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .nav-search-wrapper, .navbar-bottom { display: none; }
+  .brand-name { display: none; }
+}

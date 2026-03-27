@@ -1,0 +1,112 @@
+/* --- Main Container --- */
+.region-section {
+  max-width: 1440px;
+  margin: 40px auto;
+  padding: 0 5%;
+}
+
+.region-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 25px;
+}
+
+/* --- Grid Layout --- */
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+/* --- Region Card --- */
+.region-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: transparent;
+}
+
+.region-card:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transform: translateX(5px);
+}
+
+/* Flag Image Animation */
+.region-flag {
+  width: 28px;
+  height: 20px;
+  overflow: hidden;
+  border-radius: 2px;
+  transition: transform 0.4s ease;
+}
+
+.region-card:hover .region-flag {
+  transform: scale(1.2) rotate(5deg);
+}
+
+.region-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info Text */
+.region-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-name {
+  font-size: 16px;
+  color: #1c1c1c;
+  margin: 0;
+  font-weight: 500;
+}
+
+.country-domain {
+  font-size: 13px;
+  color: #8b96a5;
+  margin-top: 2px;
+}
+
+/* --- Entrance Animation --- */
+@keyframes fadeInUpRegion {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-reveal {
+  opacity: 0;
+  animation: fadeInUpRegion 0.6s ease-out forwards;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 1024px) {
+  .region-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .region-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .region-grid {
+    grid-template-columns: 1fr;
+  }
+}

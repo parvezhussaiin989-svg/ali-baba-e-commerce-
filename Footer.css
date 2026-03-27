@@ -1,0 +1,213 @@
+/* --- Footer Main --- */
+.main-footer {
+  background-color: #ffffff;
+  padding-top: 40px;
+  border-top: 1px solid #e3e8ee;
+}
+
+.footer-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 40px;
+}
+
+/* Brand Info */
+.footer-brand {
+  max-width: 280px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-logo img {
+  height: 40px;
+}
+
+.footer-logo span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #8b96a5;
+}
+
+.footer-desc {
+  font-size: 14px;
+  color: #505050;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-socials a {
+  width: 32px;
+  height: 32px;
+  background-color: #bdc4cd;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  background-color: #0d6efd;
+}
+
+/* Links Wrapper */
+.footer-links-wrapper {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-link-group h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 15px;
+}
+
+.footer-link-group ul {
+  list-style: none;
+}
+
+.footer-link-group ul li {
+  margin-bottom: 8px;
+}
+
+.footer-link-group ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #8b96a5;
+  transition: 0.2s;
+}
+
+.footer-link-group ul li a:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+/* App Buttons */
+.footer-apps h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.app-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.app-btn i {
+  font-size: 20px;
+}
+
+.app-btn span {
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+.app-btn b {
+  font-size: 13px;
+}
+
+/* --- Bottom Copyright --- */
+.footer-bottom {
+  background-color: #eff2f4;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-bottom-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  color: #606060;
+}
+
+.footer-lang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #606060;
+  cursor: pointer;
+}
+
+.footer-lang img {
+  width: 20px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-wrap: wrap;
+  }
+  .footer-links-wrapper {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-links-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-brand {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .footer-logo {
+    justify-content: center;
+  }
+  .footer-socials {
+    justify-content: center;
+  }
+  .footer-apps {
+    width: 100%;
+    text-align: center;
+  }
+  .app-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
